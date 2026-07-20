@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>❤️ Heart Disease Prediction</h1>
+
+    <form id="predictionForm">
+
+        <div class="grid">
+
+            <input type="number" id="age" placeholder="Age" required>
+
+            <select id="sex">
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+
+            <input type="number" id="cp" placeholder="Chest Pain Type (0-3)" required>
+
+            <input type="number" id="trestbps" placeholder="Resting BP" required>
+
+            <input type="number" id="chol" placeholder="Cholesterol" required>
+
+            <select id="fbs">
+                <option value="0">Fasting Blood Sugar ≤120</option>
+                <option value="1">Fasting Blood Sugar >120</option>
+            </select>
+
+            <input type="number" id="restecg" placeholder="Rest ECG (0-2)" required>
+
+            <input type="number" id="thalach" placeholder="Max Heart Rate" required>
+
+            <select id="exang">
+                <option value="0">No Exercise Angina</option>
+                <option value="1">Exercise Angina</option>
+            </select>
+
+            <input type="number" step="0.1" id="oldpeak" placeholder="Oldpeak" required>
+
+            <input type="number" id="slope" placeholder="Slope (0-2)" required>
+
+            <input type="number" id="ca" placeholder="CA (0-4)" required>
+
+            <input type="number" id="thal" placeholder="Thal (0-3)" required>
+
+        </div>
+
+        <button type="submit">
+            Predict
+        </button>
+
+    </form>
+
+    <div id="result" class="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

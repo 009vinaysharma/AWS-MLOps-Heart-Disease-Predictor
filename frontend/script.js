@@ -25,7 +25,7 @@ form.addEventListener("submit", async (e) => {
     };
 
     try {
-        const response = await fetch("http://13.63.35.246:8000/predict", {
+        const response = await fetch("/predict", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

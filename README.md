@@ -376,22 +376,21 @@ README.md
 
 ---
 
-# 📷 Project Screenshots
+# 📷 Prediction Results
 
-Include screenshots for
+## 💚 Output 1 – Low Risk Prediction
 
-- Homepage
-- Prediction Form
-- Low Risk Prediction
-- High Risk Prediction
-- Swagger Documentation
-- EC2 Dashboard
-- Docker Container
-- SageMaker Endpoint
-- Amazon S3 Bucket
-- Domain Configuration
-- SSL Certificate
+The model predicts that the patient has a **low risk of heart disease** based on the provided medical parameters.
 
+![Low Risk Prediction](screenshots/Output1.png)
+
+---
+
+## ❤️ Output 2 – High Risk Prediction
+
+The model predicts that the patient has a **high risk of heart disease** based on the provided medical parameters.
+
+![High Risk Prediction](screenshots/Output2.png)
 ---
 
 # 💪 Challenges Faced

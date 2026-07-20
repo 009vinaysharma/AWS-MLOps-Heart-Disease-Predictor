@@ -573,7 +573,7 @@ The application successfully predicts that the patient has a **Low Risk** of hea
 The application successfully predicts that the patient has a **High Risk** of heart disease based on the entered medical attributes.
 
 <p align="center">
-<img src="./Output2.png" width="900">
+<img src="./output2.png" width="900">
 </p>
 
 ---

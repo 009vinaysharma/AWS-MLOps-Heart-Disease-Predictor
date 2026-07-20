@@ -61,7 +61,7 @@ The prediction is generated using a Machine Learning model deployed on AWS SageM
 
 | Service | Link |
 |---------|------|
-| 🌐 Frontend | https://heart.vinaysharmatech.xyz |
+| 🌐 Live Application | https://heart.vinaysharmatech.xyz |
 | 📖 Swagger Documentation | https://heart.vinaysharmatech.xyz/docs |
 | ❤️ Prediction API | https://heart.vinaysharmatech.xyz/predict |
 | 🩺 Health Check | https://heart.vinaysharmatech.xyz/health |

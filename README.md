@@ -286,15 +286,9 @@ AWS-MLOps-Heart-Disease-Predictor/
 
 # 📸 Project Output
 
-### 🏠 Home Page
-
-> Add image: **Home.png**
-
----
-
 ### 📊 Prediction Output 1
 
-> Add image: **Output.1.png**
+![Output 1](Output.1.png)
 
 ---
 

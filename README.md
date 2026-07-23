@@ -86,11 +86,23 @@ Patient Information
 
 # 📊 Dataset
 
-This project uses the **Heart Disease Dataset (heart_1190.csv)** containing nearly **1,190 patient records**.
+This project uses two publicly available Heart Disease datasets to build a robust and reliable prediction model.
 
-The dataset combines publicly available heart disease records to create a larger and more diverse dataset for training.
+### 📁 Dataset 1 – Heart Disease UCI Dataset
 
-### Input Features
+- **Filename:** `heart.csv`
+- **Records:** 303 (approximately 302–303 patient records)
+- **Purpose:** Used as the original benchmark dataset for data exploration, preprocessing, and initial model evaluation.
+
+### 📁 Dataset 2 – Heart Disease Combined Dataset
+
+- **Filename:** `heart_1190.csv`
+- **Records:** 1,190 patient records
+- **Purpose:** A larger combined dataset used for final model training to improve prediction performance and generalization.
+
+The project workflow started with the original Heart Disease UCI dataset and later moved to the larger combined dataset for training the production model. This helped the model learn from a more diverse set of patient records and achieve better prediction performance.
+
+### 🩺 Input Features
 
 - Age
 - Sex
@@ -103,7 +115,13 @@ The dataset combines publicly available heart disease records to create a larger
 - Exercise Induced Angina
 - Oldpeak
 - ST Slope
+- Number of Major Vessels (CA)
+- Thalassemia (Thal)
 
+### 🎯 Target Variable
+
+- **0 → No Heart Disease**
+- **1 → Heart Disease**
 ### Target
 
 - **0 → No Heart Disease**
@@ -276,7 +294,7 @@ AWS-MLOps-Heart-Disease-Predictor/
 
 ### 📊 Prediction Output 1
 
-> Add image: **Output1.png**
+> Add image: **Output.1.png**
 
 ---
 
@@ -374,13 +392,9 @@ During this project I learned:
 
 Arya College of Engineering & IT, Jaipur
 
-### 🌐 Portfolio
-
-https://vinaysharmatech.xyz
-
 ### 💻 GitHub
 
-https://github.com/009vinaysharmatech
+https://github.com/009vinaysharma
 
 ### 🚀 Live Project
 

@@ -1,11 +1,16 @@
 # ❤️ AWS MLOps Heart Disease Predictor
 
+
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.11-blue?logo=python" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?logo=fastapi" />
-  <img src="https://img.shields.io/badge/AWS-SageMaker-orange?logo=amazonaws" />
-  <img src="https://img.shields.io/badge/Scikit--Learn-RandomForest-F7931E?logo=scikitlearn" />
-  <img src="https://img.shields.io/badge/Accuracy-92%25-brightgreen" />
+
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi)
+![AWS EC2](https://img.shields.io/badge/AWS-EC2-FF9900?logo=amazonaws)
+![Amazon S3](https://img.shields.io/badge/Amazon-S3-569A31?logo=amazons3)
+![Amazon SageMaker](https://img.shields.io/badge/Amazon-SageMaker-FF9900?logo=amazonaws)
+![Random Forest](https://img.shields.io/badge/Model-RandomForest-success)
+![Accuracy](https://img.shields.io/badge/Accuracy-92%25-brightgreen)
+
 </p>
 
 <p align="center">

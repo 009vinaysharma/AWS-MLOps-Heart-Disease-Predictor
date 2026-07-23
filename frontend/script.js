@@ -46,7 +46,7 @@ form.addEventListener("submit", async (e) => {
     try {
 
         const response = await fetch(
-            "http://13.63.35.246:8000/predict",
+            "/predict",
             {
                 method: "POST",
 
@@ -78,8 +78,7 @@ form.addEventListener("submit", async (e) => {
                         .map(err => err.msg)
                         .join(", ");
 
-                } 
-                else {
+                } else {
 
                     errorMessage = result.detail;
 
@@ -87,14 +86,14 @@ form.addEventListener("submit", async (e) => {
 
             }
 
-
             throw new Error(errorMessage);
 
         }
 
 
+        // HIGH RISK
 
-        if (result.prediction === 1) {
+        if (result.risk === "High") {
 
 
             resultDiv.className = "result danger";
@@ -106,22 +105,28 @@ form.addEventListener("submit", async (e) => {
 
                 <h2>High Risk</h2>
 
-                <p>
+
+                <p style="margin-top:10px;">
                     ${result.result}
                 </p>
 
-                <hr>
+
+                <hr style="margin:15px 0;">
+
 
                 <p>
                     <strong>Risk Level:</strong>
                     ${result.risk}
                 </p>
 
-                <p>
+
+                <p style="margin-top:10px;">
                     ⚠ Please consult a cardiologist for further diagnosis.
                 </p>
 
+
                 <br>
+
 
                 <small>
                     ${result.note}
@@ -131,6 +136,9 @@ form.addEventListener("submit", async (e) => {
 
 
         } 
+        
+        // LOW RISK
+
         else {
 
 
@@ -143,22 +151,28 @@ form.addEventListener("submit", async (e) => {
 
                 <h2>Low Risk</h2>
 
-                <p>
+
+                <p style="margin-top:10px;">
                     ${result.result}
                 </p>
 
-                <hr>
+
+                <hr style="margin:15px 0;">
+
 
                 <p>
                     <strong>Risk Level:</strong>
                     ${result.risk}
                 </p>
 
-                <p>
+
+                <p style="margin-top:10px;">
                     ✅ Maintain healthy lifestyle and regular exercise.
                 </p>
 
+
                 <br>
+
 
                 <small>
                     ${result.note}
@@ -170,6 +184,7 @@ form.addEventListener("submit", async (e) => {
 
 
     } 
+    
     catch(error) {
 
 
@@ -185,7 +200,8 @@ form.addEventListener("submit", async (e) => {
 
             <h2>Prediction Failed</h2>
 
-            <p>
+
+            <p style="margin-top:10px;">
                 ${error.message}
             </p>
 

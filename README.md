@@ -294,13 +294,13 @@ AWS-MLOps-Heart-Disease-Predictor/
 
 ### 📊 Prediction Output 2
 
-> Add image: **Output2.png**
+![Output 2](Output2.png)
 
 ---
 
 ### 📊 Prediction Output 3
 
-> Add image: **Output3.png**
+![Output 3](Output3.png)
 
 ---
 

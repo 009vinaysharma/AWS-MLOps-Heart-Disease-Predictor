@@ -41,12 +41,16 @@ def predict_disease(data: HeartData):
         # SageMaker response
         prediction = int(result["predictions"][0])
 
-        if prediction == 0:
-            risk = "High"
-            message = "Heart Disease Detected"
-        else:
+        # Updated Target Mapping
+        # 1 = No Heart Disease (Low Risk)
+        # 0 = Heart Disease (High Risk)
+
+        if prediction == 1:
             risk = "Low"
             message = "No Heart Disease"
+        else:
+            risk = "High"
+            message = "Heart Disease Detected"
 
         return {
             "status": "success",

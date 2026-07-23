@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# SageMaker Runtime Client
 runtime = boto3.client(
     "sagemaker-runtime",
     region_name=os.getenv("AWS_REGION")
@@ -15,6 +14,7 @@ ENDPOINT_NAME = os.getenv("ENDPOINT_NAME")
 
 
 def predict(data):
+
     payload = {
         "instances": [[
             data.age,
@@ -27,9 +27,7 @@ def predict(data):
             data.thalach,
             data.exang,
             data.oldpeak,
-            data.slope,
-            data.ca,
-            data.thal
+            data.slope
         ]]
     }
 

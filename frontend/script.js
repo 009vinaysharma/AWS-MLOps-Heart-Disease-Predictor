@@ -8,6 +8,7 @@ form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     loadingDiv.style.display = "block";
+
     resultDiv.innerHTML = "Analyzing patient data...";
     resultDiv.className = "result";
 
@@ -34,15 +35,12 @@ form.addEventListener("submit", async (e) => {
 
         oldpeak: parseFloat(document.getElementById("oldpeak").value),
 
-        slope: parseInt(document.getElementById("slope").value),
-
-
-        // Added missing backend fields
-        ca: 0,
-
-        thal: 2
+        slope: parseInt(document.getElementById("slope").value)
 
     };
+
+
+    console.log("Sending Data:", data);
 
 
     try {
@@ -69,8 +67,6 @@ form.addEventListener("submit", async (e) => {
 
         if (!response.ok) {
 
-            console.log("Backend Error:", result);
-
             let errorMessage = "Prediction Failed";
 
 
@@ -82,7 +78,8 @@ form.addEventListener("submit", async (e) => {
                         .map(err => err.msg)
                         .join(", ");
 
-                } else {
+                } 
+                else {
 
                     errorMessage = result.detail;
 
@@ -97,8 +94,6 @@ form.addEventListener("submit", async (e) => {
 
 
 
-        // Prediction Result
-
         if (result.prediction === 1) {
 
 
@@ -111,27 +106,22 @@ form.addEventListener("submit", async (e) => {
 
                 <h2>High Risk</h2>
 
-                <p style="margin-top:10px;">
+                <p>
                     ${result.result}
                 </p>
 
-
-                <hr style="margin:15px 0;">
-
+                <hr>
 
                 <p>
-                    <strong>Risk Level :</strong>
+                    <strong>Risk Level:</strong>
                     ${result.risk}
                 </p>
 
-
-                <p style="margin-top:10px;">
+                <p>
                     ⚠ Please consult a cardiologist for further diagnosis.
                 </p>
 
-
                 <br>
-
 
                 <small>
                     ${result.note}
@@ -140,7 +130,8 @@ form.addEventListener("submit", async (e) => {
             `;
 
 
-        } else {
+        } 
+        else {
 
 
             resultDiv.className = "result success";
@@ -152,28 +143,22 @@ form.addEventListener("submit", async (e) => {
 
                 <h2>Low Risk</h2>
 
-
-                <p style="margin-top:10px;">
+                <p>
                     ${result.result}
                 </p>
 
-
-                <hr style="margin:15px 0;">
-
+                <hr>
 
                 <p>
-                    <strong>Risk Level :</strong>
+                    <strong>Risk Level:</strong>
                     ${result.risk}
                 </p>
 
-
-                <p style="margin-top:10px;">
-                    ✅ Maintain a healthy lifestyle and regular exercise.
+                <p>
+                    ✅ Maintain healthy lifestyle and regular exercise.
                 </p>
 
-
                 <br>
-
 
                 <small>
                     ${result.note}
@@ -184,8 +169,8 @@ form.addEventListener("submit", async (e) => {
         }
 
 
-
-    } catch(error) {
+    } 
+    catch(error) {
 
 
         loadingDiv.style.display = "none";
@@ -200,8 +185,7 @@ form.addEventListener("submit", async (e) => {
 
             <h2>Prediction Failed</h2>
 
-
-            <p style="margin-top:10px;">
+            <p>
                 ${error.message}
             </p>
 
